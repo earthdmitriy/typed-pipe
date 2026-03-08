@@ -1,0 +1,63 @@
+{
+  "name": "typed-pipe",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "Type-safe function composition utilities with null skipping, logging, and first-class TypeScript inference.",
+  "keywords": [
+    "pipe",
+    "functional",
+    "composition",
+    "typescript",
+    "null",
+    "skip-null",
+    "logging",
+    "type-safe",
+    "fp",
+    "flow",
+    "utility",
+    "pipeline",
+    "function-composition",
+    "typed",
+    "inference"
+  ],
+  "main": "./dist/index.js",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "default": "./dist/index.js"
+    },
+    "./dist/*": {
+      "types": "./dist/*.d.ts",
+      "import": "./dist/*.js"
+    }
+  },
+  "scripts": {
+    "format": "prettier --write \"**/*.ts\"",
+    "build": "rm -rf dist && prettier --write \"**/*.ts\" && tsc -p tsconfig.json",
+    "test": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/earthdmitriy/typed-pipe.git"
+  },
+  "author": "earthdmitriy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/earthdmitriy/typed-pipe/issues"
+  },
+  "homepage": "https://github.com/earthdmitriy/typed-pipe#readme",
+  "devDependencies": {
+    "prettier": "^3.3.3",
+    "tslib": "^2.5.0",
+    "typescript": "^5.3.3",
+    "vite-tsconfig-paths": "^6.1.1",
+    "vitest": "^4.0.18"
+  }
+}
