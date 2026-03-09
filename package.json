@@ -1,6 +1,6 @@
 {
   "name": "typed-pipe",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "type": "module",
   "description": "Type-safe function composition utilities with null skipping, logging, and first-class TypeScript inference.",
   "keywords": [
